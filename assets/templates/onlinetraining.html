@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <marquee>
+        <h1 style="color: red;"><bold>Welcome to Navyait Solutions!</bold></h1>
+    </marquee>
+</div>
+<div style="position: absolute; right: 20px; top: 180px; padding: 10px; border: 2px solid #000; border-radius: 20px;">
+    <img src="{% static 'imges/navya.jpeg' %}" alt="Logo" height="350px" width="500px" style="display: block;">
+</div>
+
+<p>
+    <h1 style="color: red;">
+        Welcome to Navyait Solutions
+    </h1>
+    <h4>
+        Welcome to Navyait Solutions Pvt Ltd, your Premier IT Staffing and empowering <br>businesses through Innovative IT Consulting Services.
+    </h4>
+
+    <h4>
+        Navyait Solutions understands the difficulties businesses experience in locating skilled IT workers<br> and designing custom software solutions to fit their specific requirements. With our significant <br>
+        experience and skills in IT staffing and software development, we provide comprehensive solutions<br>
+        that are tailored to your specific needs.
+    </h4>
+
+    <h4>
+        "At Navyait Solutions Pvt Ltd, we pride ourselves on our commitment to excellence and innovation.<br>
+        Our team of seasoned professionals is dedicated to staying abreast of the <br>
+        latest trends and technologies in the ever-evolving IT landscape. Whether you're a startup<br>
+        looking to build a robust online presence or an established enterprise seeking<br>
+        to streamline your IT operations, we have the expertise and resources to help you achieve your goals.
+    </h4>
+</p>
+
+<!-- Get In Touch Form Section -->
+<div style="padding: 50px; margin-top: 40px;">
+    <h1 style="text-align: center; color: #333; margin-bottom: 20px;">REGISTER FOR ONLINE TRAING</h1>
+    
+    <p style="text-align: center; color: #777; margin-bottom: 30px;">
+        "One-line training provides quick, focused learning for immediate skill application."
+    </p>
+    
+    <form action="{% url 'register' %}" method="POST">        
+        {% csrf_token %}
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="text" id="collage" name="collage" placeholder="Enter Your Collage Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+           
+            <div style="width: 48%; margin-bottom: 15px;">
+                <select id="branch" name="branch" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+                    <!-- <option value="" disabled selected>Select Your Branch</option> -->
+                    <!-- <option value="Computer Science">Computer Science</option>
+                    <option value="ai&ml Engineering">AI&ML Engineering</option> -->
+                    <!-- <option value="civil Engineering">Civil Engineering</option> -->
+                    <!-- <option value="Mechanical Engineering">Mechanical Engineering</option> -->
+                    <!-- <option value="Electrical Engineering">Electrical Engineering</option> -->
+                    <!-- <option value="Electronics Engineering">Electronics Engineering</option>
+                    <option value="it Engineering">IT Engineering</option>
+                    <option value="Chemical Engineering">Chemical Engineering</option> -->
+
+                    <option value="" disabled selected>Select Your Branch</option>
+                    <option value="Computer Science" {% if branch == "Computer Science" %}selected{% endif %}>Computer Science</option>
+                    <option value="AI&ML Engineering" {% if branch == "AI&ML Engineering" %}selected{% endif %}>AI&ML Engineering</option>
+                    <option value="civil Engineering" {% if branch == "civil Engineering" %}selected{% endif %}>civil Engineering</option>
+
+                    <option value="Mechanical Engineering" {% if branch == "Mechanical Engineering" %}selected{% endif %}>Mechanical Engineering</option>
+                    <option value="Electrical Engineering" {% if branch == "Electrical Engineering" %}selected{% endif %}>Electrical Engineering</option>
+                    <option value="Electronics Engineering" {% if branch == "Electronics Engineering" %}selected{% endif %}>Electronics Engineering</option>
+                    <option value="it Engineering" {% if branch == "it Engineering" %}selected{% endif %}>it Engineering</option>
+                    <option value="Chemical Engineering" {% if branch == "Chemical Engineering" %}selected{% endif %}>Chemical Engineering</option>
+                    <!-- <option value="Computer Science" {% if branch == "Computer Science" %}selected{% endif %}>Computer Science</option> -->
+                    <!-- <option value="AI&ML Engineering" {% if branch == "AI&ML Engineering" %}selected{% endif %}>AI&ML Engineering</option> -->
+                    <!-- Add other options here -->
+                </select>
+            </div>
+            
+            <div style="width: 48%; margin-bottom: 15px;">
+                <select id="year" name="year" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+                    <option value="" disabled selected>Select Your Year</option>
+                   
+                    <option value="" disabled selected>Select Your Year</option>
+                    <option value="1" {% if year == "1" %}selected{% endif %}>1st Year</option>
+                    <option value="2" {% if year == "2" %}selected{% endif %}>2nd Year</option>
+                    <option value="3" {% if year == "3" %}selected{% endif %}>3rd Year</option>
+                    <option value="4" {% if year == "4" %}selected{% endif %}>4th Year</option>
+                </select>
+            </div>
+        </div>
+       
+        
+        <button type="submit" style="background-color: #b90046; color: white; padding: 14px 20px; border: none; cursor: pointer; width: 200px; text-align: center; text-transform: uppercase; font-weight: bold;">SUBMIT</button>
+        {% if messages %}
+        {% for message in messages %}
+        <font color='GREEN'> {{ message }}</font>
+        {% endfor %}
+        {% endif %}
+    </form>
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="{% static 'imges\amma1.jpg' %}" alt="Logo" height="60px" width="200px">
+
+        <p>We provide innovative tools designed to simplify complex tasks and boost your productivity.</p>
+        <address>
+          Sai Tirumala Towers
+          62WQ+6P7, Ngo Colony, extension, Reddy Nagar,<br>          
+          Narasaraopeta, Andhra Pradesh 522601
+        </address>
+       
+      </div>
+   
+
+{% endblock %}
+
+
+
+
+
+<form action="{% url 'onlinetraining' %}" method="POST">
+    {% csrf_token %}
+    
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+        <div style="width: 48%; margin-bottom: 15px;">
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" 
+                style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;"
+                value="{{ name }}">
+        </div>
+        <div style="width: 48%; margin-bottom: 15px;">
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" 
+                style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;"
+                value="{{ email }}">
+        </div>
+    </div>
+    
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+        <div style="width: 48%; margin-bottom: 15px;">
+            <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number" 
+                style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;"
+                value="{{ phone }}">
+        </div>
+        <div style="width: 48%; margin-bottom: 15px;">
+            <input type="text" id="collage" name="collage" placeholder="Enter Your Collage Name" 
+                style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;"
+                value="{{ collage }}">
+        </div>
+    </div>
+    
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+        <div style="width: 48%; margin-bottom: 15px;">
+            <select id="branch" name="branch" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+                <option value="" disabled selected>Select Your Branch</option>
+                <option value="Computer Science" {% if branch == "Computer Science" %}selected{% endif %}>Computer Science</option>
+                <option value="AI&ML Engineering" {% if branch == "AI&ML Engineering" %}selected{% endif %}>AI&ML Engineering</option>
+                <!-- Add other options here -->
+            </select>
+        </div>
+        
+        <div style="width: 48%; margin-bottom: 15px;">
+            <select id="year" name="year" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+                <option value="" disabled selected>Select Your Year</option>
+                <option value="1" {% if year == "1" %}selected{% endif %}>1st Year</option>
+                <option value="2" {% if year == "2" %}selected{% endif %}>2nd Year</option>
+                <option value="3" {% if year == "3" %}selected{% endif %}>3rd Year</option>
+                <option value="4" {% if year == "4" %}selected{% endif %}>4th Year</option>
+            </select>
+        </div>
+    </div>
+    
+    <button type="submit" style="background-color: #b90046; color: white; padding: 14px 20px; border: none; cursor: pointer; width: 200px; text-align: center; text-transform: uppercase; font-weight: bold;">SUBMIT</button>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <font color='green'>{{ message }}</font>
+        {% endfor %}
+    {% endif %}
+</form>

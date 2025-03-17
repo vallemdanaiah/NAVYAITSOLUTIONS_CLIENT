@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  border: 20px;
+  padding: 40px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* .dani{
+    background-color: aqua;
+    
+} */
+footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+  
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .footer-section {
+      flex: 1 1 5%; /* Adjust the width as needed */
+      padding: 10px;
+    }
+  
+    .footer-section h4 {
+      margin-top: 0;
+    }
+  
+    address {
+      font-style: normal; /* Optional: make the address style normal */
+    }
+    

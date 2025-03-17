@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="background-color: orange; width: 1350px; height: 120px; border-radius: 90px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 20px;">
+    <span style="font-size: 24px; font-weight: bold;">ABOUT US</span>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+    <!-- Left Side: Content -->
+    <div style="flex: 1; padding: 20px;">
+        <p style="font-size: 16px; color: #555;">
+            At <b>Navyait Solutions</b>, we are equipped to provide you with professional and affordable solutions for all of your technology needs. Our team of seasoned experts have the knowledge and expertise to develop tailored plans that meet any budget for small or large companies.
+        </p>
+        <p style="font-size: 16px; color: #555;">
+             We understand how important it is for businesses to stay on top of their tech infrastructure in order to remain competitive – that’s why our mission is to deliver long-term IT strategies and support services that guarantee results every time.
+            <br>Welcome to <b>Navyait Solutions Pvt Ltd</b>, your trusted IT consulting agency. We offer loyalty programs, exceptional customer service, and affordable prices. Our mission is to provide high-quality IT solutions tailored to your needs. Experience innovation and reliability with Navyait Solutions Pvt Ltd.
+        </p>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+        <img src="{% static 'imges/navya.jpg' %}" alt="About Us Image" style="max-width: 100%; height: auto; border-radius: 10px;">
+    </div>
+</div>
+
+<!-- Boxes Section -->
+<div style="display: flex; justify-content: space-between; margin: 20px 0;">
+    <!-- Box 1 -->
+    <div style="flex: 1; padding: 20px; border: 2px solid #dd2020; border-radius: 10px; margin-right: 10px; background-color: #f9f9f9;">
+        <h2 style="color:orange;">Our Mission</h2>
+        <p style="font-size: 16px; color: #555;">
+                <p style="font-size: 16px; color: #555;">
+                “Navyait Solutions: Empowering businesses through <br>
+                innovative software solutions for enhanced productivity and <br>
+                success.”
+                </p>
+            <!-- This is the content of the first box. You can add any text, images, or other HTML elements here. -->
+        
+    </div>
+
+    <!-- Box 2 -->
+    <div style="flex: 1; padding: 20px; border: 2px solid #dd2020; border-radius: 10px; margin-left: 10px; background-color: #f9f9f9;">
+        <h2 style="color:orange;">Our Values</h2>
+        <p style="font-size: 16px; color: #555;">
+        1.<b>Innovation:</b> Always seeking new solutions.<br>
+        2.<b>Integrity:</b> Guided by honesty and transparency.<br>
+        3.<b>Excellence:</b> Committed to superior quality.<br>
+        4.<b>Collaboration:</b> Together, we achieve more.<br>
+        5.<b>Customer-Centricity:</b> Clients are our priority.
+            <!-- This is the content of the second box. Customize this area with different information as needed. -->
+        </p>
+    </div>
+</div>
+
+<!-- Team Members Section -->
+<div style="text-align: center; margin: 40px 0;">
+    <h2 style="color:orange;"><b>Team Members</b></h2>
+    <div style="display: flex; justify-content: center; gap: 20px;">
+      
+        <!-- Team Member 1 --> 
+        <div style="flex: 1; text-align: center;">
+            <div style="width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 3px solid #dd2020; margin: 0 auto;">
+                <img src="{% static 'imges/obual.jpg' %}" alt="Team Member 1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p style="font-weight: bold; color: #555;">AMMER<br><span style="font-weight: normal;">CEO & GENERAL MANAGER</span></p>
+        </div>
+        <!-- Team Member 2 -->  
+        <div style="flex: 1; text-align: center;">
+            <div style="width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 3px solid #dd2020; margin: 0 auto;">
+                <img src="{% static 'imges/obual.jpg' %}" alt="Team Member 1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p style="font-weight: bold; color: #555;">ABHI<br><span style="font-weight: normal;"> HR MANAGER &SR:  PYTHON DEVELOPER</span></p>
+        </div>
+        <!-- Team Member 3 -->  
+        <div style="flex: 1; text-align: center;">
+            <div style="width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 3px solid #dd2020; margin: 0 auto;">
+                <img src="{% static 'imges/obual.jpg' %}" alt="Team Member 1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p style="font-weight: bold; color: #555;">VENKY<br><span style="font-weight: normal;">SR: ML ENGINEER</span></p>
+        </div>
+        <!-- Team Member 4 -->  
+        <div style="flex: 1; text-align: center;">
+            <div style="width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 3px solid #dd2020; margin: 0 auto;">
+                <img src="{% static 'imges/obual.jpg' %}" alt="Team Member 1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p style="font-weight: bold; color: #555;">DANI<br><span style="font-weight: normal;">SR: PYTHON DEVELOPER</span></p>
+        </div>
+       
+        <!-- Add more team members as needed -->
+    </div>
+</div>
+
+<!-- Our Clients Section -->
+<div style="text-align: center; margin: 40px 0;">
+    <h2 style="color: #333;">Our Clients</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 20px;">
+        <div style="width: 250px; height: 250;">
+            <img src="{% static 'imges/images.jpg' %}" alt="Client 1" style="max-width: 100%; height: auto;">
+            <p style="font-size: 14px; color: #555;">rvrjc collage</p>
+        </div>
+        <div style="width: 250px; height: 250;">
+            <img src="{% static 'imges/nec.jpg' %}" alt="Client 2" style="max-width: 100%; height: auto;">
+            <p style="font-size: 14px; color: #555;">nec collage</p>
+
+        </div>
+        <div style="width: 150px;">
+            <img src="{% static 'imges/client3.png' %}" alt="Client 3" style="max-width: 100%; height: auto;">
+        </div>
+        <div style="width: 150px;">
+            <img src="{% static 'imges/client4.png' %}" alt="Client 4" style="max-width: 100%; height: auto;">
+        </div>
+        <!-- Add more clients as needed -->
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="{% static 'imges\amma1.jpg' %}" alt="Logo" height="60px" width="200px">
+        <p>We provide innovative tools designed to simplify complex tasks and boost your productivity.</p>
+        <address>
+            Sai Tirumala Towers
+  62WQ+6P7, Ngo Colony, extension, Reddy Nagar,<br>          
+  Narasaraopeta, Andhra Pradesh 522601
+          </address>
+      </div>
+
+
+{% endblock %}

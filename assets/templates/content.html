@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="background-color: orange; width: 1350px; height: 120px; border-radius: 90px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 20px;">
+    <span style="font-size: 24px; font-weight: bold;">CONTENT US</span>
+</div><br>
+    <div style="width: 1050px; height: 350px; border-radius: 90px; display: flex; align-items: center; padding: 10px;">
+        <div style="flex: 1; padding-left: 1000px; border: 2px solid orange; border-radius: 10px; padding: 10px; background-color: white;">
+            <p style="margin: 0; font-size: 14px; color: #dd2020;">
+                <span style="margin-right: 5px;">📧</span> Navyaitsolutions4@gmail.com<br>
+                <span style="margin-right: 5px;">📍</span> 62WQ+6P7, Ngo Colony, extension, Reddy Nagar, Narasaraopeta, Andhra Pradesh 522601<br>
+                <span style="margin-right: 5px;">📞</span> +91 7075895718,6281287253
+                
+            </p>
+        </div>        
+        <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
+            <img src="{% static 'imges\dani.jpg' %}" alt="Your Image Description" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Get In Touch Form Section -->
+<div style="padding: 50px; margin-top: 40px;">
+    <h1 style="text-align: center; color: #333; margin-bottom: 20px;">Get In Touch</h1>
+    
+    <p style="text-align: center; color: #777; margin-bottom: 30px;">
+        Please provide the following information about your business needs to help us serve you better.
+    </p>
+    
+    <form action="{% url 'getintouch' %}" method="POST" >
+        {% csrf_token %}
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="text" id="name" name="name" placeholder="Name" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="email" id="email" name="email" placeholder="Email" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap;">
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="tel" id="phone" name="phone" placeholder="Phone" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+            <div style="width: 48%; margin-bottom: 15px;">
+                <input type="text" id="subject" name="subject" placeholder="subject" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;">
+            </div>
+        </div>
+        
+        <div style="width: 100%; margin-bottom: 20px;">
+            <textarea id="message" name="message" placeholder="Your Message" style="width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box; height: 100px; resize: vertical;"></textarea>
+        </div>
+        
+        <button type="submit" style="background-color: #b90046; color: white; padding: 14px 20px; border: none; cursor: pointer; width: 200px; text-align: center; text-transform: uppercase; font-weight: bold;">SUBMIT</button>
+        {% if messages %}
+        {% for message in messages %}
+        <font color='GREEN'> {{ message }}</font>
+        {% endfor %}
+        {% endif %}
+    </form>
+</div>
+<hr>
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.51121752986!2d80.03670727411479!3d16.245549034695642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a8161404ca41d%3A0x803c4d5d2a3bdb2f!2sSai%20Tirumala%20Towers!5e0!3m2!1sen!2sin!4v1730526272632!5m2!1sen!2sin" width="1400" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    </div>
+    <hr>
+   
+
+<br><br><br>
+
+        <div class="footer-content">
+          <div class="footer-section">
+            <img src="{% static 'imges\amma1.jpg' %}" alt="Logo" height="60px" width="200px">
+    
+            <p>We provide innovative tools designed to simplify complex tasks and boost your productivity.</p>
+            <address>
+                Sai Tirumala Towers
+      62WQ+6P7, Ngo Colony, extension, Reddy Nagar,<br>          
+      Narasaraopeta, Andhra Pradesh 522601
+              </address>
+          </div>
+
+{% endblock %}

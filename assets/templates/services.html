@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="background-color: orange; width: 1350px; height: 120px; border-radius: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 20px; position: relative;">
+    <!-- Top links -->
+    <div style="width: 100%; display: flex; justify-content: space-between; position: absolute; top: 10px; padding: 0 20px;">
+        <h3 style="background-color: blue; padding: 10px;"> 
+            <a href="{% url 'register' %}" style="color: white; text-decoration: none;">Apply For Online Training</a>
+            <span style="color: red; font-weight: bold; animation: blink 1s infinite;">★</span> <!-- Blinking symbol -->
+
+        </h3>
+        <h3 style="background-color: blue; padding: 10px; position: relative;"> 
+            <a href="{% url 'register1' %}" style="color: white; text-decoration: none;">Apply For Project</a>
+            <span style="color: red; font-weight: bold; animation: blink 1s infinite;">★</span> <!-- Blinking symbol -->
+        </h3>
+    </div>
+
+    <!-- Centered text -->
+    <span style="font-size: 24px; font-weight: bold;">SERVICES</span>   
+
+    <style>
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+
+
+</div>
+
+<!-- Boxes Section -->  
+
+<div style="display: flex; justify-content: space-around; margin-top: 20px; width: 1350px;">
+    <div style="background-color: lightblue; width: 900px; height: 100px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+        <a href="#">Python Projects</a>
+    </div>
+    <div style="background-color: lightgreen; width: 900px; height: 100px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+        <a href="#">Data Science Projects(ML&DL&NLP)</a>
+    </div>
+    
+</div>
+
+<div style="display: flex; justify-content: space-around; margin-top: 20px; width: 1350px;">
+    <div style="background-color: lightblue; width: 900px; height: 100px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+        <a href="#">VLSI Projects</a>
+    </div>
+    <div style="background-color: lightgreen; width: 900px; height: 100px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+        <a href="#">Web Development Projects</a>
+    </div>
+    
+</div>
+<div style="display: flex; justify-content: space-around; margin-top: 20px; width: 1350px;">
+    <div style="background-color: lightblue; width: 900px; height: 100px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+        <a href="#">Matlab Projects</a>
+    </div>
+    <div style="background-color: lightgreen; width: 900px; height: 100px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+        <a href="#">Emded systems(KitBased)</a>
+    </div>
+    
+</div>
+
+    
+<hr>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="{% static 'imges\amma1.jpg' %}" alt="Logo" height="60px" width="200px">
+        <p>We provide innovative tools designed to simplify complex tasks and boost your productivity.</p>
+        <address>
+            Sai Tirumala Towers
+  62WQ+6P7, Ngo Colony, extension, Reddy Nagar,<br>          
+  Narasaraopeta, Andhra Pradesh 522601
+          </address>
+      </div>
+
+{% endblock %}

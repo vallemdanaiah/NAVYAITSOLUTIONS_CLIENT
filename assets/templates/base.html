@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navyait Solutions!</title>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+<!-- <link rel="stylesheet" href="css/styles.css"> -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Ensure the path is correct -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>  
+
+<div class="topnav">
+<img src="{% static 'imges\aaa.jpg' %}" alt="Logo" height="120px" width="200px">
+  <a href="{% url 'content' %}">Contact Us</a> 
+  <a href="{% url 'services' %}">Services</a>
+  <a href="{% url 'about' %}">About Us</a>
+  <a class="active" href="{% url 'logout' %}">Home</a>
+</div>
+
+{% block content %}
+{% endblock %}
+      
+  <!-- <footer> -->
+     <div class="footer-section">  
+        <div class="company-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a class="active" href="{% url 'logout' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'content' %}">Contact Us</a></li>
+            
+          </ul>
+        </div>
+      </div>
+  
+      <div class="footer-section">
+        <div class="services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Python Projects</a></li>
+            <li><a href="#">Data Science Projects(ML&DL)</a></li>
+            <li><a href="#">VLSI Projects</a></li>
+            <li><a href="#">Web Development Projects</a></li>
+            <li><a href="#">Matlab Projects</a></li>
+            <li><a href="#">Emded systems(KitBased)</a></li>
+
+          </ul>
+        </div>
+      </div>
+    <!-- <div class="footer-section">  
+      <div class="products">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+      </div>
+     </div>
+   -->
+      <div class="office-hours">
+        <h4>Office Hours</h4>
+        <p>Morning: 9 AM to 6 PM,<br> Monday to Friday</p>
+      </div>
+    </div>
+    <!-- <div class="footer-section">
+      <div class="social-media">
+          <div class="social-links">
+              <a href="#" class="fab fa-facebook"></a>&nbsp;&nbsp;&nbsp;
+              <a href="#" class="fab fa-linkedin"></a>&nbsp;&nbsp;&nbsp;
+              <a href="#" class="fab fa-instagram"></a>&nbsp;&nbsp;&nbsp;
+              <a href="#" class="fab fa-twitter"></a> --><!-- Added Twitter icon -->
+          <!-- </div>
+      </div>  -->
+  </div>
+      
+  </footer>
+  <hr>
+  <center>
+    
+    <p>© Copyright 2025 All Rights Reserved
+
+      Designed by Navyait SOLUTIONS</p>
+  </center>
+
+</html>
